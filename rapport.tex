@@ -1,0 +1,19 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\title{Report on the first part of the programmation project}
+\author{bloubloub}
+\date{Deposed the 2022/10/30}
+
+\begin{document}
+
+\maketitle
+No additional features have been added to the asked ones. I considered that spaces, tablations and ends of line were not part of the syntax and should be treated as lexing mistakes (except for an end of line preceding an end of file). \newline However, if your tests consider that some of these characters are included in the syntax and only work as separators, you can get rid of the "(*" and "*)" around lines $31$, $32$ or $33$ of the file lexer\_luthorer.mll
+\newline\newline The case of the modulo being not precised, I chose the modulo as implemented directly in X86\_64 assembler.
+\newline\newline For both division by 0 and modulo 0, my implementation leads to an error, the results being floating points that I try to handle as integeers. I chose not to correct that.
+\newline\newline On a practical term, I used Ocamllex and Ocamlyacc for the lexing and parsing parts, because I did not manage to program a parser from scratch.
+\end{document}
